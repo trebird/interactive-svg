@@ -1,9 +1,19 @@
-.bear:hover #left-ear, .bear:hover #right-ear {
-  transform: translate(0, -8px);
-  transition: all .5s .5s linear;
+#bear:hover #left-ear, #bear:hover #right-ear {
+  animation: ear-up .5s .5s ease-in-out;
+
 }
 
-.bear:hover #left-eye, .bear:hover #right-eye {
-  transform: translate(15px, 0);
-  transition: all 2s linear;
+@keyframes ear-up {
+
+  from {
+    transform: translate(0,0);
+  }
+
+  to {
+    transform: translate(0,-10px);
+  }
+
+}
+#bear:hover #left-ear, .bear:hover #right-ear {
+
 }
