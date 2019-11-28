@@ -1,33 +1,33 @@
+
 #bear:hover #left-ear, #bear:hover #right-ear {
-  animation: ear-up .5s ease-in;
-
-}
-
-@keyframes ear-up {
-
-  from {
-    transform: translate(0,0);
-  }
-
-  to {
-    transform: translate(0,-10px);
-  }
-
-}
-
-#bear:hover #left-eye, #bear:hover #right-eye {
-  animation: shifty-eyes 2s linear;
-
+  transform: translate(0, -10px);
+  transition: .5s ease-in-out;
 }
 
 @keyframes shifty-eyes {
 
-  from {
-    transform: translate(0,0);
+  0% {
+    transform: translate(0, 0);
   }
 
-  to {
-    transform: translate(15px,0);
+  33% {
+    transform: translate(12px, 0);
   }
 
+  66% {
+    transform: translate(-12px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
+
+#bear:hover #right-eye {
+  animation: shifty-eyes 3s linear alternate;
+}
+
+#bear:hover #left-eye {
+  animation: shifty-eyes 3s linear alternate;
 }
