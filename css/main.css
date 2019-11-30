@@ -1,7 +1,10 @@
 
+#bear #left-ear, #bear #right-ear {
+  transition: all .5s linear;
+}
+
 #bear:hover #left-ear, #bear:hover #right-ear {
   transform: translate(0, -10px);
-  transition: .5s ease-in-out;
 }
 
 @keyframes shifty {
@@ -10,12 +13,12 @@
     transform: translate(0, 0);
   }
 
-  33% {
-    transform: translate(12px, 0);
+  20% {
+    transform: translate(9px, 0);
   }
 
-  66% {
-    transform: translate(-12px, 0);
+  80% {
+    transform: translate(-9px, 0);
   }
 
   100% {
@@ -24,10 +27,6 @@
 
 }
 
-#bear:hover #right-eye {
-  animation: shifty 3s linear alternate;
-}
-
-#bear:hover #left-eye {
-  animation: shifty 3s linear alternate;
+#bear #left-eye, #bear #right-eye {
+  animation: shifty 3s linear infinite;
 }
